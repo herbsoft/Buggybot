@@ -15,8 +15,8 @@ try:
 
     def set_speeds(power_left, power_right):
 
-        motor_left = 1  # Motor B
-        motor_right = 0  # Motor A
+        motor_left = 0  # Motor A
+        motor_right = 1  # Motor B
 
         pz.setMotor(motor_left, power_left)
         pz.setMotor(motor_right, power_right)
