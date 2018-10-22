@@ -4,13 +4,14 @@
 
 
 from approxeng.input.selectbinder import ControllerResource
+from time import sleep
 
 
 # ------------------------------------------------------------------------------
 
 
 try:
-    import piconzero as pz, time
+    import piconzero as pz
 
     def set_speeds(power_left, power_right):
 
