@@ -21,6 +21,8 @@ try:
         pz.setMotor(motor_left, power_left)
         pz.setMotor(motor_right, power_right)
 
+        # We need a sleep here otherwise the controller code goes a bit awol
+        sleep(0.1)
 
     def stop_motors():
         pz.stop()
