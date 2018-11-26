@@ -70,24 +70,26 @@ try:
                     if joystick.has_presses:
                         print(joystick.presses)
 
-                    if 'home' in joystick.presses:
-                        # If home was pressed, raise a RobotStopException to bail out of the loop
-                        # Home is generally the PS button for playstation controllers, XBox for XBox etc
-                        raise MenuExitException()
+                        if 'home' in joystick.presses:
+                            # If home was pressed, raise a RobotStopException to bail out of the loop
+                            # Home is generally the PS button for playstation controllers, XBox for XBox etc
+                            raise MenuExitException()
 
-                    elif 'dleft' in joystick.presses:
-                        mode -= 1
-                        if mode < 1:
-                            mode = len(switcher)
+                        elif 'dleft' in joystick.presses:
+                            mode -= 1
+                            if mode < 1:
+                                mode = len(switcher)
 
-                    elif 'dright' in joystick.presses:
-                        mode += 1
-                        if mode > len(switcher):
-                            mode = 1
+                        elif 'dright' in joystick.presses:
+                            mode += 1
+                            if mode > len(switcher):
+                                mode = 1
 
-                    elif 'cross' in joystick.presses:
-                        print('Selected mode $mode')
-                        run_mode(mode)
+                        elif 'cross' in joystick.presses:
+                            print('Selected mode $mode')
+                            run_mode(mode)
+
+                    sleep(0.1)
 
         except IOError:
             # We get an IOError when using the ControllerResource if we don't have a controller yet,
