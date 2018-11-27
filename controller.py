@@ -2,10 +2,8 @@
 #
 # ------------------------------------------------------------------------------
 
-
 from approxeng.input.selectbinder import ControllerResource
 from time import sleep
-
 
 # ------------------------------------------------------------------------------
 
@@ -21,6 +19,10 @@ try:
         pz.setMotor(motor_left, power_left)
         pz.setMotor(motor_right, power_right)
 
+        # print('Left: {}, Right {}'.format(power_left, power_right))
+
+        # The sleep here is needed otherwise the controller goes a bit out of control
+        sleep(0.1)
 
     def stop_motors():
         pz.stop()
