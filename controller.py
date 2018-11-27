@@ -19,9 +19,13 @@ try:
         pz.setMotor(motor_left, power_left)
         pz.setMotor(motor_right, power_right)
 
+<<<<<<< HEAD
         # print('Left: {}, Right {}'.format(power_left, power_right))
 
         # The sleep here is needed otherwise the controller goes a bit out of control
+=======
+        # We need a sleep here otherwise the controller code goes a bit awol
+>>>>>>> 4d0f2a483201772914279a4a78e7e785c0c5410a
         sleep(0.1)
 
     def stop_motors():
