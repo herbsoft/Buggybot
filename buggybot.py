@@ -97,7 +97,7 @@ try:
             print('No controller found yet')
             sleep(1)
 
-except RobotStopException:
+except MenuExitException:
     # This exception will be raised when the home button is pressed, at which point we should
     # stop the motors.
     print('Shutting down')
