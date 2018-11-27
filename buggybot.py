@@ -86,7 +86,7 @@ try:
                                 mode = 1
 
                         elif 'cross' in joystick.presses:
-                            print('Selected mode $mode')
+                            print('Selected mode {}'.format(mode))
                             run_mode(mode)
 
                     sleep(0.1)
